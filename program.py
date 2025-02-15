@@ -44,7 +44,8 @@ if install_dir:
                 print("Изменения в реестре успешно применены")
 
                 print("Запуск игры...")
-                subprocess.Popen(game_exe_path, shell=True)
+                steam_command = "start steam://run/1568590"
+                subprocess.Popen(steam_command, shell=True)
             else:
                 print("Ошибка при применении реестра:", result.stderr)
         else:
